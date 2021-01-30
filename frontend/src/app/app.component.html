@@ -2,30 +2,36 @@
 
 <div>
   <label>Enter length</label>
-  <input />
+  <!-- Event Handler Binding to get the event target value -->
+  <input (input)="onChangeLength($event)" />
 </div>
 
 <div>
   <label>Use letters</label>
-  <input type="checkbox">
+  <input type="checkbox" (change)="onChangeUseLetters()" >
 </div>
 
 <div>
   <label>Use Numbers</label>
-  <input type="checkbox">
+  <input type="checkbox" (change)="onChangeUseNumbers()" >
 </div>
 
 <div>
   <label>Use Symbols</label>
-  <input type="checkbox">
+  <input type="checkbox" (change)="onChangeUseSymbols()" >
 </div>
 
 <div>
+  <!-- Event Binding Syntax --> 
   <button (click)="onButtonClick()">Generate!</button>
 </div>
 
 <div>
   <label>Your Password</label>
   <!-- you can insert any property or method name -->
+  <!-- Property Binding Syntax -->
   <input [value]="password"/>
 </div>
+
+<!-- Interpolation Syntax -->
+<!-- {{ password }} -->
