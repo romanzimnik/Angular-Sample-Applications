@@ -1,36 +1,55 @@
-<h1>Password Generator</h1>
+<div class="container">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-centered">Password Generator</h1>
 
-<div>
-  <label>Enter length</label>
-  <!-- Event Handler Binding to get the event target value -->
-  <input (input)="onChangeLength($event)" />
-</div>
+      <div class="field">
+        <label>Length</label>
+        <!-- Event Handler Binding to get the event target value -->
+        <input class="input" (input)="onChangeLength($event)" />
+      </div>
 
-<div>
-  <label>Use letters</label>
-  <input type="checkbox" (change)="onChangeUseLetters()" >
-</div>
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseLetters()" type="checkbox" />
+            Use Letters
+          </label>
+        </div>
+      </div>
 
-<div>
-  <label>Use Numbers</label>
-  <input type="checkbox" (change)="onChangeUseNumbers()" >
-</div>
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseNumbers()" type="checkbox" />
+            Use Numbers
+          </label>
+        </div>
+      </div>
 
-<div>
-  <label>Use Symbols</label>
-  <input type="checkbox" (change)="onChangeUseSymbols()" >
-</div>
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseSymbols()" type="checkbox" />
+            Use Symbols
+          </label>
+        </div>
+      </div>
 
-<div>
-  <!-- Event Binding Syntax --> 
-  <button (click)="onButtonClick()">Generate!</button>
-</div>
+      <button [disabled]="
+          !(length && (includeLetters || includeSymbols || includeNumbers))
+        " (click)="onButtonClick()" class="button is-link is-fullwidth">
+        Generate!
+      </button>
 
-<div>
-  <label>Your Password</label>
-  <!-- you can insert any property or method name -->
-  <!-- Property Binding Syntax -->
-  <input [value]="password"/>
+      <div class="box">
+        <label>Your Password</label>
+        <!-- you can insert any property or method name -->
+        <!-- Property Binding Syntax -->
+        <input class="input" [value]="password" />
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Interpolation Syntax -->
