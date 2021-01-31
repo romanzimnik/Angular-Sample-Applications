@@ -1,5 +1,7 @@
 # Angular-Sample-Applications
 
+![alt text][logo]
+
 ## Welcome to the world of Angular!
 
 Let us first clarify the most important questions:
@@ -17,3 +19,6 @@ Let us first clarify the most important questions:
 1. `password-generator-application`
 
     Start with that one, if you are totally new to Angular! This is by far the most simple app. It is a simple one-component based sample asking for user input and implementing some of Angulars conditional magic, as well as event and attribute binding explained.
+
+
+[logo]: angular.svg
